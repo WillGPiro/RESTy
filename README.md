@@ -1,11 +1,11 @@
 # RESTY API
 Presentational Components
   1. Create Form Component
-  [] Create Input Form
-  [] Create Radio Buttons 
-    [] get [] post [] put [] patch 
-  [] Go! Button
-  [] Raw Body JSON [] Large Object Form | Type: Input
+  [x] Create Input Form
+  [x] Create Radio Buttons 
+    [x] get [x] post [x] put [x] patch 
+  [x] Go! Button
+  [x] Raw Body JSON [x] Large Object Form | Type: Input
   [] Authorization Form 
   [] Headers Input
   [] Form.CSS

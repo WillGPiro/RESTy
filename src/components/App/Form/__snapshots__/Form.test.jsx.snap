@@ -1,0 +1,54 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Form container matches a snapshot of Form.jsx 1`] = `
+<section>
+  <form
+    onSubmit={[Function]}
+  >
+    <input
+      name="URL"
+      type="text"
+      value="https://xfiles-api.herokuapp.com/api/v1/characters"
+    />
+    <button>
+      Go
+    </button>
+    <label>
+      Get: 
+      <input
+        name="urlSearch"
+        type="radio"
+        value="get"
+      />
+      Post:
+      <input
+        name="urlSearch"
+        type="radio"
+        value="post"
+      />
+      Put:
+      <input
+        name="urlSearch"
+        type="radio"
+        value="put"
+      />
+      Patch:
+      <input
+        name="urlSearch"
+        type="radio"
+        value="patch"
+      />
+      Delete: 
+      <input
+        name="urlSearch"
+        type="radio"
+        value="delete"
+      />
+    </label>
+    <textarea
+      name="RawJsonBody"
+      value="JSON body"
+    />
+  </form>
+</section>
+`;
