@@ -5,9 +5,10 @@ import Form from '../components/Form/Form';
 const FormControl = () => {
   const [url, setUrl] = useState('');
   const [radio, setRadio] = useState('');
-
+  const [text, setText] = useState('');
+  const [submit, setSubmit] = useState('');
   
-  const handleChange = ({ target }) => {
+  const handleUrlChange = ({ target }) => {
     setUrl(target.value);
   };
 
@@ -15,8 +16,16 @@ const FormControl = () => {
     setRadio(target.value);
   };
 
+  const handleBodyChange = ({ target }) => {
+    setText(target.value);
+  };
+  
   return (
-    <Form inputURL={url} onUrlChange={handleChange} radio={radio}handleRadioButton={handleRadioButton} />
+    <Form 
+      inputURL={url} onUrlChange={handleUrlChange} 
+      radio={radio} handleRadioButton={handleRadioButton} 
+      body={text} onBodyChange={handleBodyChange}
+    />
   );
 };
 
