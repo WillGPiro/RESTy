@@ -7,6 +7,7 @@ exports[`Form container matches a snapshot of Form.jsx 1`] = `
   >
     <input
       name="URL"
+      onChange={[Function]}
       type="text"
       value="https://xfiles-api.herokuapp.com/api/v1/characters"
     />
@@ -19,41 +20,44 @@ exports[`Form container matches a snapshot of Form.jsx 1`] = `
         name="urlSearch"
         onChange={[Function]}
         type="radio"
-        value="get"
+        value="GET"
       />
       Post:
       <input
         name="urlSearch"
         onChange={[Function]}
         type="radio"
-        value="post"
+        value="POST"
       />
       Put:
       <input
         name="urlSearch"
         onChange={[Function]}
         type="radio"
-        value="put"
+        value="PUT"
       />
       Patch:
       <input
         name="urlSearch"
         onChange={[Function]}
         type="radio"
-        value="patch"
+        value="PATCH"
       />
       Delete: 
       <input
         name="urlSearch"
         onChange={[Function]}
         type="radio"
-        value="delete"
+        value="DELETE"
       />
     </label>
     <textarea
       name="RawJsonBody"
+      onChange={[Function]}
       value="JSON body"
-    />
+    >
+       
+    </textarea>
   </form>
 </section>
 `;

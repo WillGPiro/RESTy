@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const Form = ({ onSubmit, onUrlChange, method, inputURL, buttonText = 'Go!', body, handleRadioButton, onBodyChange }) => (
+const Form = ({ onSubmit, onUrlChange, inputURL, buttonText = 'Go!', body, handleRadioButton, onBodyChange }) => (
   <section>
     <form onSubmit={onSubmit}>
       <input type ="text" name="URL" value={inputURL} onChange={onUrlChange}/>
@@ -21,7 +21,6 @@ const Form = ({ onSubmit, onUrlChange, method, inputURL, buttonText = 'Go!', bod
 Form.propTypes = {
   onSubmit: PropTypes.func.isRequired,
   onUrlChange: PropTypes.func.isRequired,
-  method: PropTypes.string.isRequired,
   inputURL: PropTypes.string.isRequired,
   buttonText: PropTypes.string.isRequired,
   body: PropTypes.string.isRequired,
