@@ -1,5 +1,5 @@
 # RESTY API
-Presentational Components
+[x]Presentational Components
   1. Create Form Component
   [x] Create Input Form
   [x] Create Radio Buttons 
@@ -13,9 +13,9 @@ Presentational Components
   2. Header
     [] RESTy API Title
 
-  3. History Component
+  3. [] History Component
 
-  4. Response Component 
+  4. [] Response Component 
 
 Container Components
   1. Form Control Component
