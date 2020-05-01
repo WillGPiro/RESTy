@@ -7,11 +7,11 @@ const Form = ({ onSubmit, onUrlChange, method, inputURL, buttonText = 'Go!', bod
       <input type ="text" name="URL" value={inputURL} onChange={onUrlChange}/>
       <button>{buttonText}</button>
       <label> 
-        Get: <input type ="radio" name="urlSearch" value="get" onChange={handleRadioButton} checked={method === 'get'}> </input>
-        Post:<input type ="radio" name="urlSearch" value="post" onChange={handleRadioButton} checked={method === 'post'}></input>
-        Put:<input type ="radio" name="urlSearch" value="put" onChange={handleRadioButton} checked={method === 'put'}></input>
-        Patch:<input type ="radio" name="urlSearch" value="patch" onChange={handleRadioButton} checked={method === 'patch'}></input>
-        Delete: <input type ="radio" name="urlSearch" value="delete" onChange={handleRadioButton} checked={method === 'delete'}></input>
+        Get: <input type ="radio" name="urlSearch" value="GET" onChange={handleRadioButton} /> 
+        Post:<input type ="radio" name="urlSearch" value="POST" onChange={handleRadioButton} />
+        Put:<input type ="radio" name="urlSearch" value="PUT" onChange={handleRadioButton} />
+        Patch:<input type ="radio" name="urlSearch" value="PATCH" onChange={handleRadioButton} />
+        Delete: <input type ="radio" name="urlSearch" value="DELETE" onChange={handleRadioButton} />
       </label>
       <textarea name="RawJsonBody" value={body} onChange={onBodyChange}> </textarea>
     </form>
