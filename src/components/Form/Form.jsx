@@ -7,11 +7,11 @@ const Form = ({ onSubmit, onUrlChange, inputURL, buttonText = 'Go!', body, handl
       <input type ="text" name="URL" value={inputURL} onChange={onUrlChange}/>
       <button>{buttonText}</button>
       <label> 
-        Get: <input type ="radio" name="urlSearch" value="GET" onChange={handleRadioButton} /> 
-        Post:<input type ="radio" name="urlSearch" value="POST" onChange={handleRadioButton} />
-        Put:<input type ="radio" name="urlSearch" value="PUT" onChange={handleRadioButton} />
-        Patch:<input type ="radio" name="urlSearch" value="PATCH" onChange={handleRadioButton} />
-        Delete: <input type ="radio" name="urlSearch" value="DELETE" onChange={handleRadioButton} />
+        Get: <input type ="radio" name="method" value="GET" onChange={handleRadioButton} /> 
+        Post:<input type ="radio" name="method" value="POST" onChange={handleRadioButton} />
+        Put:<input type ="radio" name="method" value="PUT" onChange={handleRadioButton} />
+        Patch:<input type ="radio" name="method" value="PATCH" onChange={handleRadioButton} />
+        Delete: <input type ="radio" name="method" value="DELETE" onChange={handleRadioButton} />
       </label>
       <textarea name="RawJsonBody" value={body} onChange={onBodyChange}> </textarea>
     </form>
