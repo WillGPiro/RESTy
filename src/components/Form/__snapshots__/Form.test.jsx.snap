@@ -17,35 +17,35 @@ exports[`Form container matches a snapshot of Form.jsx 1`] = `
     <label>
       Get: 
       <input
-        name="urlSearch"
+        name="method"
         onChange={[Function]}
         type="radio"
         value="GET"
       />
       Post:
       <input
-        name="urlSearch"
+        name="method"
         onChange={[Function]}
         type="radio"
         value="POST"
       />
       Put:
       <input
-        name="urlSearch"
+        name="method"
         onChange={[Function]}
         type="radio"
         value="PUT"
       />
       Patch:
       <input
-        name="urlSearch"
+        name="method"
         onChange={[Function]}
         type="radio"
         value="PATCH"
       />
       Delete: 
       <input
-        name="urlSearch"
+        name="method"
         onChange={[Function]}
         type="radio"
         value="DELETE"
