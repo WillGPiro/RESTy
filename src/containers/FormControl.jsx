@@ -9,7 +9,7 @@ const FormControl = () => {
   const [url, setUrl] = useState('');
   const [method, setMethod] = useState('GET');
   const [body, setBody] = useState('');
-  // const [response, setResponse] = useState({});
+  const [response, setResponse] = useState({});
   // const [history, setHistory] = useState([]);
   
   //Handles user input based on name. 
@@ -22,7 +22,7 @@ const FormControl = () => {
   const handleSubmit = (event) => {
     event.preventDefault();
     makeRequest(url, method, body)
-      .then(json => console.log(json));
+      .then(json => setResponse(json));
   }; 
       
   return (
@@ -35,7 +35,7 @@ const FormControl = () => {
         method={method}
         body={body}
       />
-      {/* <Response response={response}/> */}
+      <Response response={response}/>
     </>
   );
 };
