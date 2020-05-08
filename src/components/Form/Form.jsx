@@ -7,7 +7,7 @@ import styles from './Form.css';
 const Form = ({ onSubmit, onChange, inputURL, buttonText = 'Go!', body, method }) => (
   <section>
     <form className={styles.Request} onSubmit={onSubmit}>
-      <input type ="text" name="URL" value={inputURL} onChange={onChange}/>
+      <input type ="text" name="url" value={inputURL} onChange={onChange}/>
       
       <input id="GET" type ="radio" name="method" value="GET" checked={method === 'GET'} onChange={onChange} /> 
       <label htmlFor="GET"> GET:</label>

@@ -1,29 +1,26 @@
 import React, { useState } from 'react';
 import Form from '../components/Form/Form';
-import { makeRequest } from '../services/makeRequest';
+// import { makeRequest } from '../services/makeRequest';
 import Response from '../components/Response/Response';
 
 
 const FormControl = () => {
   const [url, setUrl] = useState('');
-  const [radio, setRadio] = useState('GET');
+  const [method, setMethod] = useState('GET');
   const [body, setBody] = useState('');
-  const [response, setResponse] = useState({});
-  const [history, setHistory] = useState([]);
+  // const [response, setResponse] = useState({});
+  // const [history, setHistory] = useState([]);
   
-  const handleUrlChange = ({ target }) => {
+  //Handles user input based on name. 
+  const handleChange = ({ target }) => {
     if(target.name === 'url') setUrl(target.value);
-    if(target.name === 'method') setRadio(target.value);
+    if(target.name === 'method') setMethod(target.value);
     if(target.name === 'body') setBody(target.value);
   };
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    makeRequest(url, radio, body)
-      .then(response => {
-        setResponse(json)
-        setHistory(prevHistory => [{ url, method}, ...prevHistory]);
-      });
+    console.log('This is a test of the handle sumbit function, if this was a real handle submit you would need to make a request to', url, method, body);
   }; 
       
   
@@ -32,13 +29,12 @@ const FormControl = () => {
     <>
       <Form 
         onSubmit={handleSubmit}
-        onChange={}
-        inputURL={handleUrlChange}  
-        url={}
-        method={}
-        body={}
+        onChange={handleChange}
+        url={url}
+        method={method}
+        body={body}
       />
-      <Response response={response}/>
+      {/* <Response response={response}/> */}
     </>
   );
 };
