@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 
 const Response = ({ response }) => (
   <section>
-    <p>{JSON.stringify(response)}</p>
+    <pre>{JSON.stringify(response, null, 2)}</pre>
   </section>
 );
 
