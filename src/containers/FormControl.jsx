@@ -1,47 +1,48 @@
 import React, { useState } from 'react';
 import Form from '../components/Form/Form';
 import { makeRequest } from '../services/makeRequest';
+import Response from '../components/Response/Response';
 
 
 const FormControl = () => {
   const [url, setUrl] = useState('');
-  const [radio, setRadio] = useState('POST');
-  const [text, setText] = useState('');
-  const [submit, setSubmit] = useState([]);
+  const [radio, setRadio] = useState('GET');
+  const [body, setBody] = useState('');
+  const [response, setResponse] = useState({});
+  const [history, setHistory] = useState([]);
   
   const handleUrlChange = ({ target }) => {
-    setUrl(target.value);
+    if(target.name === 'url') setUrl(target.value);
+    if(target.name === 'method') setRadio(target.value);
+    if(target.name === 'body') setBody(target.value);
   };
 
-  const handleRadioButton = ({ target }) => {
-    setRadio(target.value);
-  };
-
-  const handleBodyChange = ({ target }) => {
-    setText(target.value);
-  };
-  
   const handleSubmit = (event) => {
     event.preventDefault();
-    makeRequest(url, radio, text)
-      .then(submit => setSubmit(submit));
-  };
-
+    makeRequest(url, radio, body)
+      .then(response => {
+        setResponse(json)
+        setHistory(prevHistory => [{ url, method}, ...prevHistory]);
+      });
+  }; 
+      
+  
   return (
-    <Form 
-      submit={submit} onSubmit={handleSubmit}
-      inputURL={url} onUrlChange={handleUrlChange} 
-      radio={radio} handleRadioButton={handleRadioButton} 
-      body={text} onBodyChange={handleBodyChange}
-    />
+    
+    <>
+      <Form 
+        onSubmit={handleSubmit}
+        onChange={}
+        inputURL={handleUrlChange}  
+        url={}
+        method={}
+        body={}
+      />
+      <Response response={response}/>
+    </>
   );
 };
 
 export default FormControl;
-
-
-
-
-
 
 

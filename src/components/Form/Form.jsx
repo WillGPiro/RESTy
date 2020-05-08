@@ -1,31 +1,44 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import styles from './Form.css';
 
-const Form = ({ onSubmit, onUrlChange, inputURL, buttonText = 'Go!', body, handleRadioButton, onBodyChange }) => (
+
+
+const Form = ({ onSubmit, onChange, inputURL, buttonText = 'Go!', body, method }) => (
   <section>
-    <form onSubmit={onSubmit}>
-      <input type ="text" name="URL" value={inputURL} onChange={onUrlChange}/>
+    <form className={styles.Request} onSubmit={onSubmit}>
+      <input type ="text" name="URL" value={inputURL} onChange={onChange}/>
+      
+      <input id="GET" type ="radio" name="method" value="GET" checked={method === 'GET'} onChange={onChange} /> 
+      <label htmlFor="GET"> GET:</label>
+
+      <input id="POST" type ="radio" name="method" value="POST" checked={method === 'POST'} onChange={onChange} />
+      <label htmlFor="POST"> POST:</label>
+
+      <input id="PUT" type ="radio" name="method" value="PUT" checked={method === 'PUT'} onChange={onChange} />
+      <label htmlFor="PUT"> PUT:</label>
+
+      <input id="PATCH" type ="radio" name="method" value="PATCH" checked={method === 'PATCH'} onChange={onChange} />
+      <label htmlFor="PATCH"> PATCH:</label>
+
+      <input id="DELETE" type ="radio" name="method" value="DELETE" checked={method === 'DELETE'} onChange={onChange} />
+      <label htmlFor="DELETE"> DELETE: </label>
+
       <button>{buttonText}</button>
-      <label> 
-        Get: <input type ="radio" name="method" value="GET" onChange={handleRadioButton} /> 
-        Post:<input type ="radio" name="method" value="POST" onChange={handleRadioButton} />
-        Put:<input type ="radio" name="method" value="PUT" onChange={handleRadioButton} />
-        Patch:<input type ="radio" name="method" value="PATCH" onChange={handleRadioButton} />
-        Delete: <input type ="radio" name="method" value="DELETE" onChange={handleRadioButton} />
-      </label>
-      <textarea name="RawJsonBody" value={body} onChange={onBodyChange}> </textarea>
+      <textarea name="body" value={body} onChange={onChange}> </textarea>
+      
     </form>
   </section>
 );
 
 Form.propTypes = {
   onSubmit: PropTypes.func.isRequired,
-  onUrlChange: PropTypes.func.isRequired,
+  onChange: PropTypes.func.isRequired,
   inputURL: PropTypes.string.isRequired,
   buttonText: PropTypes.string.isRequired,
   body: PropTypes.string.isRequired,
   handleRadioButton: PropTypes.func.isRequired,
-  onBodyChange: PropTypes.func.isRequired,
+  method: PropTypes.string.isRequired
 };
 
 export default Form;

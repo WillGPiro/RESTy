@@ -25,8 +25,7 @@ Container Components
 Hooks
   1. HttpMethods
     [] useGet, 
-    [] usePost, https://jsonplaceholder.typicode.com/
-
+    [] usePost, https://jsonplaceholder.typicode.com
     [] usePut, 
     [] usePatch, 
     [] Delete
