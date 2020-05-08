@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import Form from '../components/Form/Form';
 // import { makeRequest } from '../services/makeRequest';
 import Response from '../components/Response/Response';
+import { makeRequest } from '../services/makeRequest';
 
 
 const FormControl = () => {
@@ -20,10 +21,10 @@ const FormControl = () => {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    console.log('This is a test of the handle sumbit function, if this was a real handle submit you would need to make a request to', url, method, body);
+    makeRequest(url, method, body)
+      .then(json => console.log(json));
   }; 
       
-  
   return (
     
     <>
