@@ -1,0 +1,92 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Form container matches a snapshot of Form.jsx 1`] = `
+<section>
+  <form
+    className="Request"
+    onSubmit={[Function]}
+  >
+    <input
+      name="url"
+      onChange={[Function]}
+      type="text"
+      value="https://xfiles-api.herokuapp.com/api/v1/characters"
+    />
+    <input
+      checked={true}
+      id="GET"
+      name="method"
+      onChange={[Function]}
+      type="radio"
+      value="GET"
+    />
+    <label
+      htmlFor="GET"
+    >
+       GET:
+    </label>
+    <input
+      checked={false}
+      id="POST"
+      name="method"
+      onChange={[Function]}
+      type="radio"
+      value="POST"
+    />
+    <label
+      htmlFor="POST"
+    >
+       POST:
+    </label>
+    <input
+      checked={false}
+      id="PUT"
+      name="method"
+      onChange={[Function]}
+      type="radio"
+      value="PUT"
+    />
+    <label
+      htmlFor="PUT"
+    >
+       PUT:
+    </label>
+    <input
+      checked={false}
+      id="PATCH"
+      name="method"
+      onChange={[Function]}
+      type="radio"
+      value="PATCH"
+    />
+    <label
+      htmlFor="PATCH"
+    >
+       PATCH:
+    </label>
+    <input
+      checked={false}
+      id="DELETE"
+      name="method"
+      onChange={[Function]}
+      type="radio"
+      value="DELETE"
+    />
+    <label
+      htmlFor="DELETE"
+    >
+       DELETE: 
+    </label>
+    <button>
+      Go
+    </button>
+    <textarea
+      name="body"
+      onChange={[Function]}
+      value="JSON body"
+    >
+       
+    </textarea>
+  </form>
+</section>
+`;

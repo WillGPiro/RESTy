@@ -1,6 +1,7 @@
 import React from 'react';
+import FormControl from '../../containers/FormControl';
 
 export default function App() {
-  return <h1>Hello World</h1>;
+  return <FormControl/>;
 }
   
