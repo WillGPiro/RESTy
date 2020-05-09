@@ -13,26 +13,20 @@
   2. Header
     [] RESTy API Title
 
-  3. [] History Component
+  3. [x] History Component
 
-  4. [] Response Component 
+  4. [x] Response Component 
 
 Container Components
   1. Form Control Component
-  [] Handlers for Input
-  [] Radio Buttons- Get - Post - Put - Patch
-
-Hooks
-  1. HttpMethods
-    [] useGet, 
-    [] usePost, https://jsonplaceholder.typicode.com
-    [] usePut, 
-    [] usePatch, 
-    [] Delete
+  [x] Handlers for Input
+  [x] Radio Buttons- Get - Post - Put - Patch
 
 Service Funtions
   1. Get Service Function
   2. Post, Put, Patch Service Function. 
+
+CODE TUTORIAL WITH INSTRUCTION BY RYAN MEHTA
 
 
 
