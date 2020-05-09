@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import Form from '../components/Form/Form';
-// import { makeRequest } from '../services/makeRequest';
 import Response from '../components/Response/Response';
 import { makeRequest } from '../services/makeRequest';
+import HistoryList from '../components/History/HistoryList';
 
 
 const FormControl = () => {
@@ -10,7 +10,7 @@ const FormControl = () => {
   const [method, setMethod] = useState('GET');
   const [body, setBody] = useState('');
   const [response, setResponse] = useState({});
-  // const [history, setHistory] = useState([]);
+  const [history, setHistory] = useState([]);
   
   //Handles user input based on name. 
   const handleChange = ({ target }) => {
@@ -28,6 +28,7 @@ const FormControl = () => {
   return (
     
     <>
+      <HistoryList history={history}/>
       <Form 
         onSubmit={handleSubmit}
         onChange={handleChange}
