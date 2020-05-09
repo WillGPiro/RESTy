@@ -7,12 +7,13 @@ exports[`Form container matches a snapshot of Form.jsx 1`] = `
     onSubmit={[Function]}
   >
     <input
-      name="URL"
+      name="url"
       onChange={[Function]}
       type="text"
       value="https://xfiles-api.herokuapp.com/api/v1/characters"
     />
     <input
+      checked={true}
       id="GET"
       name="method"
       onChange={[Function]}
@@ -25,6 +26,7 @@ exports[`Form container matches a snapshot of Form.jsx 1`] = `
        GET:
     </label>
     <input
+      checked={false}
       id="POST"
       name="method"
       onChange={[Function]}
@@ -37,6 +39,7 @@ exports[`Form container matches a snapshot of Form.jsx 1`] = `
        POST:
     </label>
     <input
+      checked={false}
       id="PUT"
       name="method"
       onChange={[Function]}
@@ -49,6 +52,7 @@ exports[`Form container matches a snapshot of Form.jsx 1`] = `
        PUT:
     </label>
     <input
+      checked={false}
       id="PATCH"
       name="method"
       onChange={[Function]}
@@ -61,6 +65,7 @@ exports[`Form container matches a snapshot of Form.jsx 1`] = `
        PATCH:
     </label>
     <input
+      checked={false}
       id="DELETE"
       name="method"
       onChange={[Function]}
@@ -76,7 +81,7 @@ exports[`Form container matches a snapshot of Form.jsx 1`] = `
       Go
     </button>
     <textarea
-      name="RawJsonBody"
+      name="body"
       onChange={[Function]}
       value="JSON body"
     >

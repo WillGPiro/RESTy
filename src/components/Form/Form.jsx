@@ -37,7 +37,6 @@ Form.propTypes = {
   inputURL: PropTypes.string.isRequired,
   buttonText: PropTypes.string.isRequired,
   body: PropTypes.string.isRequired,
-  handleRadioButton: PropTypes.func.isRequired,
   method: PropTypes.string.isRequired
 };
 

@@ -15,7 +15,7 @@ const FormControl = () => {
   useEffect (() => {
     localStorage.setItem('history', JSON.stringify(history));
   }, [history]);
-  
+
   //Handles user input based on name. 
   const handleChange = ({ target }) => {
     if(target.name === 'url') setUrl(target.value);
@@ -34,7 +34,6 @@ const FormControl = () => {
   }; 
       
   return (
-    
     <>
       <HistoryList history={history}/>
       <Form 
@@ -42,8 +41,7 @@ const FormControl = () => {
         onChange={handleChange}
         url={url}
         method={method}
-        body={body}
-      />
+        body={body}/>
       <Response response={response}/>
     </>
   );
